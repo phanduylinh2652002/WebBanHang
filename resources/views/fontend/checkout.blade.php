@@ -76,18 +76,13 @@
                                         <i>-</i>VAT<span>{{ number_format(\Illuminate\Support\Facades\Session::get('total') ?? 0) }}</span>
                                     </li>
                                 </ul>
-
                             </div>
-
                             <div class="checkout-right-basket">
-                                <a href="{{ url('showcart') }}"><span class="glyphicon glyphicon-menu-left"
-                                                                      aria-hidden="true"></span>Quay lại giỏ hàng</a>
-
+                                <a href="{{ url('showcart') }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Quay lại giỏ hàng</a>
                                 <button type="submit" class="btn btn-default check_out">Gửi đơn hàng</button>
                             </div>
                             <div class="clearfix"></div>
                         </div>
-
                     @endif
                 </form>
             </div>
