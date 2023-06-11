@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
-use App\Product;
-use Cart;
 use App\Customer;
 use App\Bill;
 use App\Bill_detail;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class checkoutController extends Controller
 {
     public function postCheckOut(Request $request)
     {
-
-    	 $cartInfor = Cart::content();
         // validate
         $rule = [
             'fullName' => 'required',
@@ -30,45 +29,47 @@ class checkoutController extends Controller
 
         if ($validator->fails()) {
             return redirect('getcheckout')
-                        ->withErrors($validator)
-                        ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
 
 
         try {
-            // save
-            $customer = new Customer;
-            $customer->customer_name = $request->get('fullName');
-            $customer->customer_adress = $request->get('address');
-            $customer->customer_phone = $request->get('phoneNumber');
-            $customer->customer_email = $request->get('email');
+            DB::transaction(function () use ($request) {
+                $customer = Customer::query()->firstOrCreate([
+                    'customer_email' => $request->get('email'),
+                    'customer_phone' => $request->get('phoneNumber'),
+                ], [
+                    'customer_name' => $request->get('fullName'),
+                    'customer_adress' => $request->get('address'),
+                ]);
 
+                $bill = new Bill;
+                $bill->customer_id = $customer->customer_id;
+                $bill->bill_date = now();
+                $bill->bill_total = Session::get('total');
 
-            $customer->save();
+                $bill->save();
+                $carts = Session::get('carts') ?? [];
 
-            $bill = new Bill;
-            $bill->customer_id = $customer->customer_id;
-            $bill->bill_date = date('Y-m-d H:i:s');
-            $bill->bill_total = str_replace(',', '', Cart::total());
-
-            $bill->save();
-
-            if (count($cartInfor) >0) {
-                foreach ($cartInfor as $key => $item) {
-                    $billDetail = new Bill_detail;
-                    $billDetail->bill_id = $bill->bill_id;
-                    $billDetail->product_id = $item->id;
-                    $billDetail->quantity = $item->qty;
-                    $billDetail->price = $item->price;
-                    $billDetail->save();
+                if (count($carts) > 0) {
+                    foreach ($carts as $key => $item) {
+                        $billDetail = new Bill_detail;
+                        $billDetail->bill_id = $bill->bill_id;
+                        $billDetail->product_id = $item->id;
+                        $billDetail->quantity = $item->qty;
+                        $billDetail->price = $item->price;
+                        $billDetail->save();
+                    }
                 }
-            }
-          // del
-           Cart::destroy();
-
+                // del
+                Session::forget('carts');
+                Session::forget('total');
+            });
         } catch (Exception $e) {
             echo $e->getMessage();
         }
+
         return redirect(url(''));
     }
 }
