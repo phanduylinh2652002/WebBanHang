@@ -9,6 +9,7 @@ use App\Bill;
 use App\Bill_detail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -28,6 +29,7 @@ class checkoutController extends Controller
         $validator = Validator::make(Input::all(), $rule);
 
         if ($validator->fails()) {
+            dd(1);
             return redirect('getcheckout')
                 ->withErrors($validator)
                 ->withInput();
@@ -56,9 +58,9 @@ class checkoutController extends Controller
                     foreach ($carts as $key => $item) {
                         $billDetail = new Bill_detail;
                         $billDetail->bill_id = $bill->bill_id;
-                        $billDetail->product_id = $item->id;
-                        $billDetail->quantity = $item->qty;
-                        $billDetail->price = $item->price;
+                        $billDetail->product_id = $item['id'];
+                        $billDetail->quantity = $item['qty'];
+                        $billDetail->price = $item['price'];
                         $billDetail->save();
                     }
                 }
@@ -67,9 +69,14 @@ class checkoutController extends Controller
                 Session::forget('total');
             });
         } catch (Exception $e) {
-            echo $e->getMessage();
+            Log::error($e->getMessage());
         }
 
         return redirect(url(''));
+    }
+
+    public function checkoutSuccess()
+    {
+        return view('fontend.checkout_success');
     }
 }

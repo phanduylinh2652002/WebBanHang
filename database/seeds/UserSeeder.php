@@ -16,7 +16,15 @@ class UserSeeder extends Seeder
         User::query()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
+            'type' => 'admin',
             'password' => \Illuminate\Support\Facades\Hash::make('admin123'),
+        ]);
+
+        User::query()->create([
+            'name' => 'admin',
+            'email' => 'customer@customer.com',
+            'type' => 'customer',
+            'password' => \Illuminate\Support\Facades\Hash::make('customer123'),
         ]);
     }
 }
