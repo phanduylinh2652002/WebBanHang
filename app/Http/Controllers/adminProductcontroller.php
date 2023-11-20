@@ -61,7 +61,7 @@ class adminProductcontroller extends Controller
             'product_hot' => 'required'
 
         ]);
-        // up looad ảnh
+        // up load ảnh
         $image = $request->file('image');
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);

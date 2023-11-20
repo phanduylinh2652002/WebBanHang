@@ -26,6 +26,10 @@
                 height: 50px;
                 text-align: center;
             }
+            .pagination{
+                margin-left: 510px !important;
+                margin-top:50px !important;
+            }
         </style>
         <table  border="1px">
             <tr><th>Ảnh</th>
@@ -35,7 +39,7 @@
                 <th>Giá sale</th>
                 <th>Số lượng</th>
                 <th>Sản phẩm nổi bật</th>
-                <th width="280px">Action</th>
+                <th width="280px">Hoạt động</th>
             </tr>
             @foreach ($products as $p)
                 <tr><td><img src="{{ URL::to('/') }}/images/{{ $p->image }}" class="img-thumbnail" width="100px" /></td>
@@ -48,11 +52,11 @@
 
                     <td>
                         <form action="{{ route('product.destroy',$p->product_id) }}" method="POST">
-                            <a class="btn btn-primary" href="{{ route('product.show',$p->product_id) }}">Show</a>
-                            <a class="btn btn-primary" href="{{ route('product.edit',$p->product_id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('product.show',$p->product_id) }}">Xem</a>
+                            <a class="btn btn-primary" href="{{ route('product.edit',$p->product_id) }}">Sửa</a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button onclick="return confirm_delete()" type="submit" class="btn btn-danger">Xóa</button>
                         </form>
                     </td>
                 </tr>
@@ -62,3 +66,8 @@
     {!! $products->links() !!}
 
 @endsection
+<script>
+    function confirm_delete() {
+        return confirm('Bạn có chắc chắn muốn xóa?');
+    }
+</script>

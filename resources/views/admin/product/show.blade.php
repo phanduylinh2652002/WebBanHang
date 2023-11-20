@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Product</h2>
+                <h2> Xem sản phẩm</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('product.index') }}"> Quay lại</a>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image</strong>
+                <strong>Hình ảnh</strong>
                 <img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="200px" />
             </div>
 

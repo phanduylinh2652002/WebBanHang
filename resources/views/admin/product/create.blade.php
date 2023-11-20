@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Product</h2>
+                <h2>Thêm sản phẩm mới</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('product.index') }}"> Quay lại</a>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Tên sản phẩm:</strong>
                     <input type="text" name="product_name" class="form-control" placeholder="product_name">
                 </div>
             </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Image:</strong>
+                    <strong>Hình ảnh:</strong>
                     <input type="file" name="image"/>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Thêm</button>
             </div>
         </div>
     </form>

@@ -46,14 +46,14 @@
     left: 0;
     padding: 20px;
     position: absolute;
-    bottom: 28%;
+    bottom: 40%;
     width: 100%;
     display: inline-block;
 	text-align:center;
 }
 .skdslider .slide-desc > h3 {
     color: #ffffff;
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 20px;
     padding: 10px;
     width: 54%;

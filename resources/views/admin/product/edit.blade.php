@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Sửa sản phẩm</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('product.index') }}"> Quay lại</a>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Tên sản phẩm:</strong>
                     <input type="text" name="product_name" class="form-control" placeholder="product_name" value="{{$product->product_name}}">
                 </div>
             </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Image:</strong>
+                    <strong>Hình ảnh:</strong>
                     <input type="file" name="image" />
                     <img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="100" />
                     <input type="hidden" name="hidden_image" value="{{ $product->image }}" />
@@ -92,7 +92,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
             </div>
         </div>
     </form>

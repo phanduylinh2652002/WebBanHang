@@ -14,7 +14,6 @@
         table{
             width: 80%;
             margin-top:50px;
-
         }
         th{
             color: white;
@@ -25,11 +24,15 @@
             height: 50px;
             text-align: center;
         }
+        .pagination{
+                margin-left: 510px !important;
+                margin-top:50px !important;
+            }
     </style>
         <table  border="1px" align="center">
         <tr>
             <th>Loại sản phẩm</th>
-            <th width="280px">Action</th>
+            <th width="280px">Hoạt động</th>
         </tr>
         @foreach ($categories as $c)
             <tr>
@@ -37,10 +40,10 @@
                 <td>
                     <form action="{{route('category.destroy',$c->category_id)}}" method="POST">
 
-                        <a class="btn btn-primary" href="{{ route('category.edit', $c->category_id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('category.edit', $c->category_id) }}">Sửa</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button onclick="return confirm_delete()" type="submit" class="btn btn-danger">Xóa</button>
                     </form>
                 </td>
             </tr>
@@ -49,3 +52,8 @@
     </div>
 
 @endsection
+<script>
+    function confirm_delete() {
+        return confirm('Bạn có chắc chắn muốn xóa?');
+    }
+</script>

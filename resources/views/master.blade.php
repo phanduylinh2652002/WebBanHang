@@ -34,7 +34,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- start-smoth-scrolling -->
 
-   
 </head>
 
 <body>
@@ -54,20 +53,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="w3ls_logo_products_left1">
             <ul class="phone_email">
-                <li><i class="fa fa-phone" aria-hidden="true"></i>0327759911</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>0964028292</li>
 
             </ul>
         </div>
         <div class="w3ls_logo_products_left">
-            <h1><a href="{{ url('') }}">Thế giới cây </a></h1>
+            <h1><a href="{{ url('') }}"><img src="http://127.0.0.1:8000/images/logo2.jpg" alt=""> </a></h1>
         </div>
         <div class="w3l_search">
             <form action="{{url('search')}}" method="get">
                  @csrf
 
-                <input type="search" name="key" required="">
+                <input type="search" name="key" class="intput-margin" required="" placeholder="Nhập cây muốn tìm">
                 <button type="submit" class="btn btn-default search" aria-label="Left Align">
-                    <i class="fa fa-search" aria-hidden="true"> </i>
+                    <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
                 <div class="clearfix"></div>
             </form>
@@ -104,31 +103,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="w3_footer_grids">
             <div class="col-md-4 w3_footer_grid">
-                <h3>Contact</h3>
+                <h3>Liên hệ</h3>
 
                 <ul class="address">
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Cầu Giấy, <span>Ha Nội.</span></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">thjenit98@gmail.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0984612636</li>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Minh Khai, Bắc Từ Liêm <span>Hà Nội.</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">nhom5gmail.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0964028292</li>
                 </ul>
             </div>            
             <div class="col-md-4 w3_footer_grid">
                 <h3>Danh mục</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Cây phong thủy</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Cây văn phòng</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Cây để bàn</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Cây cảnh thủy canh</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Sen đá</a></li>
                 </ul>
             </div>
             <div class="col-md-4 w3_footer_grid">
-                <h3>Chức năng</h3>
+                <h3>Menu</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Trang chủ</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{ url('/showcart') }}">Giỏ hàng</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{ url('/login') }}">Đăng nhập</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{ url('/register') }}">Đăng ký</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -138,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-copy">
 
         <div class="container">
-            <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>© 2023 TreeFive. Đã đăng ký bản quyền | Thiết kế bởi <a href="#" style="color:#999">Nhóm 5</a></p>
         </div>
     </div>
 
@@ -152,9 +151,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
                 <li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
             </ul>
-        </div>
-        <div class="payment-w3ls">
-            <img src="images/card.png" alt=" " class="img-responsive">
         </div>
         <div class="clearfix"> </div>
     </div>

@@ -11,7 +11,7 @@
                 <div class="col-md-8 agileinfo_single_right">
                     <h2>{{$chitiet->product_name }}</h2>
                     <div class="w3agile_description">
-                        <h4>Description :</h4>
+                        <h4>Mô tả :</h4>
                         <p>{{ $chitiet->description}}</p>
                     </div>
                     <div class="snipcart-item block">

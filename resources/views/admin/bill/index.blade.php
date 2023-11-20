@@ -24,15 +24,19 @@
                 height: 50px;
                 text-align: center;
             }
+            .pagination{
+                margin-left: 510px !important;
+                margin-top:50px !important;
+            }
         </style>
         
         <table  border="1px" align="center">
-            <tr><th>Mã HD</th>
-             <th>Tên KH</th>
-             <th>Số KH</th>
+            <tr><th>Mã hóa đơn</th>
+             <th>Tên khách hàng</th>
+             <th>Số điện thoại</th>
              <th>Ngày mua</th>
              <th>Tổng tiền</th>
-                <th width="280px">Action</th>
+                <th width="280px">Hoạt động</th>
             </tr>
             @foreach ($bills as $b)
                 <tr><td>{{$b->bill_id}}</td>
@@ -51,5 +55,5 @@
         </table>
     </div>
   {!! $bills->links() !!}
-
+ 
 @endsection

@@ -59,6 +59,4 @@
     </fieldset>
     <br><br>
     </div>
-
-
 @endsection

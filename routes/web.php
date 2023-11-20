@@ -43,7 +43,6 @@ Route::group(["prefix" => "admin", "middleware" => ['auth', 'auth.admin']], func
 
 });
 // frontend
-
 Route::get('/', 'pageController@getindex');
 // loai sản phẩm
 Route::get('loai-san-pham/{type}', 'pageController@getloaisp');

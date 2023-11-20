@@ -21,11 +21,12 @@
 
         <li><a href="">Giới thiệu</a></li>
         <li><a href="">Liên hệ</a></li>
-
     </ul>
+    
     <div class="product_list_header" style="padding-top: 14px;">
-        <a href=" {{ url('showcart')}}" class="fa fa-cart-arrow-down" aria-hidden="true" width="100px"></a>
+        <a href=" {{ url('showcart')}}" class="cart fa fa-cart-arrow-down" aria-hidden="true" width="100px"></a>
     </div>
+    
     @if(auth()->user())
         <ul class="nav navbar-nav" style="float: right">
             <li class="dropdown">
@@ -34,8 +35,7 @@
                     <div class="row">
                         <div class="multi-gd-img">
                             <ul class="multi-column-dropdown">
-                                <li><a href="">My page</a></li>
-                                <li><a href="{{ route('logout') }}">Logout</a></li>
+                                <li><a href="{{ route('logout') }}">Đăng xuất</a></li>
                             </ul>
                         </div>
                     </div>
@@ -43,4 +43,30 @@
             </li>
         </ul>
     @endif
+    @if(!auth()->user())
+    <div class="header_login">
+        <a href="{{ url('/login') }}">Đăng nhập</a>
+    </div>
+    @endif
 </div>
+<style>
+    .product-list-header{
+        position: relative;
+    }
+    .cart{
+        position: absolute;
+        font-size:30px;
+        color: white;
+        top: 10px;
+    }
+    .cart:hover{
+        color: white;
+    }
+    .header_login a {
+        color: white;
+        font-size: 16px;
+        font-weight:500;
+        line-height: 50px;
+        margin-left: 570px;
+    }
+</style>

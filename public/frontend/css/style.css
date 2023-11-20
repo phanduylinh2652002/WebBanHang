@@ -45,7 +45,7 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
     text-align: center;
 }
 .my-cart-icon-affix i {
-    background: #fe9126 !important;
+    background: linear-gradient(to right, #65b28d, #07cd60) !important;
 }
 .agile_top_brand_left_grid {
     position: relative;
@@ -85,7 +85,7 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
     color: #fff;
 }
 .w3l_offers p a {
-    color: #fe9126;
+    color: linear-gradient(to right, #65b28d, #07cd60);
     text-decoration: none;
 }
 .w3l_search {
@@ -115,11 +115,17 @@ i.fa.fa-phone {
     font-size: 20px;
 }
 button.btn.btn-default.search {
-    background: #fe9126;
+    background: linear-gradient(to right, #65b28d, #07cd60);
     padding: 11px 12px 11px;
     float: right;
     outline: none;
     border: none;
+    margin-top: 30px;
+}
+.intput-margin{
+    margin-top:30px !important;
+    border-radius: 10px;
+    width:100px;
 }
 button.btn.btn-default.search:hover {
     background:#333;
@@ -181,16 +187,21 @@ button.w3view-cart:focus{
 	outline:none;
 }
 .logo_products {
-    padding: 2em 0;
+    padding: 1em 0;
 }
 .w3ls_logo_products_left {
     float: left;
     text-align: center;
     width: 33.33%;
 }
+.w3ls_logo_products_left img{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+}
 .w3ls_logo_products_left h1 a{
 	font-size: 40px;
-    color: #fe9126;
+    color: linear-gradient(to right, #65b28d, #07cd60);
     text-decoration: none;
     text-transform: uppercase;
     display: block;
@@ -204,6 +215,7 @@ button.w3view-cart:focus{
 .w3ls_logo_products_left1 ul.phone_email li{
 	display:inline-block;
 	color:#212121;
+    margin-top: 30px;
 }
 /*-- //header --*/
 .navbar-default .navbar-nav > li > a {
@@ -216,6 +228,10 @@ button.w3view-cart:focus{
 }
 .multi-column-dropdown li a {
     color: #999 !important;
+    padding: 5px;
+}
+.multi-column-dropdown>li:hover>a{
+    color: #65b28d !important;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color: transparent;
@@ -242,7 +258,7 @@ button.w3view-cart:focus{
 }
 ul.multi-column-dropdown h6 {
     font-size: 20px;
-    color:#fe9126;
+    color:linear-gradient(to right, #65b28d, #07cd60);
     margin: 0 0 0em;
     padding-bottom: 1em;
     border-bottom: 1px solid #E4E4E4;
@@ -282,7 +298,7 @@ ul.multi-column-dropdown h6 {
     width: 100%;
 }
 .navigation-agileits {
-    background: #fe9126;
+    background: linear-gradient(to right, #65b28d, #07cd60);
 }
 .navbar-nav > li {
     float: left;
@@ -409,7 +425,7 @@ ul.multi-column-dropdown h6 {
     outline: none;
 }
 .agile_top_brand_left_grid:hover .snipcart-details input.button,.snipcart-details input.button:hover{
-    background: #fe9126;
+    background: linear-gradient(to right, #65b28d, #07cd60);
 }
 .product_list_header input.button {
     color: #fff;
@@ -417,7 +433,7 @@ ul.multi-column-dropdown h6 {
     outline: none;
     text-transform: capitalize;
     padding: .5em 2.5em .5em 1em;
-    border: 1px solid #fe9126;
+    border: 1px solid linear-gradient(to right, #65b28d, #07cd60);
     margin: .35em 0 0;
     background: url(../images/cart.png) no-repeat 116px 9px;
 }
@@ -452,7 +468,7 @@ ul.multi-column-dropdown h6 {
     display: none;
 }
 #PPMiniCart .minicart-submit:hover{
-	background:#fe9126 !important;
+	background:linear-gradient(to right, #65b28d, #07cd60) !important;
 	border-color: #5b951a !important;
 }
 #PPMiniCart .minicart-subtotal {
@@ -535,13 +551,13 @@ div#myTabContent {
 }
 .nav-tabs>li>a:hover, .nav>li>a:focus {
 	text-decoration: none;
-	background: #fe9126;
+	background: linear-gradient(to right, #65b28d, #07cd60);
 	color: #FFF;
 	border:  0px solid transparent;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
     color: #FFF;
-    background: #fe9126;
+    background: linear-gradient(to right, #65b28d, #07cd60);
 	border:  0px solid transparent;
 }
 .nav-tabs {
@@ -778,8 +794,8 @@ i.gray-star {
     font-size: 14px;
 }
 .w3_footer_grid ul.address li i {
-    color:#fe9126;
-    border: 1px solid #fe9126;
+    color:linear-gradient(to right, #65b28d, #07cd60);
+    border: 1px solid linear-gradient(to right, #65b28d, #07cd60);
     padding: .5em;
     margin-right: 1em;
 }
@@ -792,7 +808,7 @@ i.gray-star {
     text-decoration: none;
 }
 .w3_footer_grid ul li a:hover {
-	color:#fe9126;
+	color:linear-gradient(to right, #65b28d, #07cd60);
 }
 .w3_footer_grid h4{
 	margin:2em 0 1em;
@@ -800,7 +816,7 @@ i.gray-star {
 	color:#ff9b05;
 }
 i.fa.fa-arrow-right {
-    color: #fe9126;
+    color: linear-gradient(to right, #65b28d, #07cd60);
     margin-right: 10px;
 }
 .footer-copy1{
@@ -936,7 +952,7 @@ a.w3_agile_vimeo:hover{
     margin: 1.5em 0 0;
 }
 .login-form-grids input[type="submit"]:hover{
-	background:#fe9126;
+	background:linear-gradient(to right, #65b28d, #07cd60);
 }
 .login-form-grids ::-webkit-input-placeholder{
 	color:#999;
@@ -964,7 +980,7 @@ a.w3_agile_vimeo:hover{
 	text-align:center;
 }
 .login p a{
-	color:#fe9126;
+	color:linear-gradient(to right, #65b28d, #07cd60);
 	text-decoration:none;
 	font-size: 1.2em;
 	padding: 0 .5em;
@@ -1064,7 +1080,7 @@ a.w3_agile_vimeo:hover{
 	text-decoration:none;
 }
 .register-home a:hover{
-	background:#fe9126;
+	background:linear-gradient(to right, #65b28d, #07cd60);
 }
 /*-- //register --*/
 /*-- checkout --*/
@@ -1085,11 +1101,11 @@ table.timetable_sub {
     background: #004284;
 }
 .timetable_sub th {
-    background: #fe9126;
+    background: linear-gradient(to right, #65b28d, #07cd60);
     color: #fff !important;
     text-transform: capitalize;
     font-size: 13px;
-    border-right: 1px solid #fe9126;
+    border-right: 1px solid linear-gradient(to right, #65b28d, #07cd60);
 }
 .timetable_sub th, .timetable_sub td {
     text-align: center;
@@ -1229,7 +1245,7 @@ td.invert-image a img {
 	text-decoration:none;
 }
 .checkout-right-basket a:hover{
-	background:#fe9126;
+	background:linear-gradient(to right, #65b28d, #07cd60);
 }
 .checkout-right-basket a span {
     left: -.5em;
@@ -1534,7 +1550,7 @@ h3.w3_agile_header:after,h2.w3_agile_header:after{
 }
 .time-top {
     padding: 1em;
-    background-color: #fe9126;
+    background-color: linear-gradient(to right, #65b28d, #07cd60);
 }
 .time-top h4 {
     font-size: 1.7em;
@@ -2331,7 +2347,7 @@ h4.m-sing {
 }
 h3.icon-subheading {
     font-size: 28px;
-    color: #fe9126 !important;
+    color: linear-gradient(to right, #65b28d, #07cd60) !important;
     margin: 30px 0 15px;
     font-weight: 600;
     letter-spacing: 2px;

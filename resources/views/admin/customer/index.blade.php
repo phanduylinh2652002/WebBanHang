@@ -3,7 +3,7 @@
     <div class="row">
         <div >
             <div class="pull-left">
-                <h2>Danh sách khách háng</h2>
+                <h2>Danh sách khách hàng</h2>
             </div>
      
         </div>
@@ -23,6 +23,10 @@
             height: 50px;
             text-align: center;
         }
+        .pagination{
+                margin-left: 510px !important;
+                margin-top:50px !important;
+            }
     </style>
  <table  border="1px" align="center">
             <tr>

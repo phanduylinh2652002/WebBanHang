@@ -39,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--logo start-->
 <div class="brand">
     <a href="index.html" class="logo">
-        VISITORS
+        ADMIN
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </a>
             <ul class="dropdown-menu extended logout">
                <!--  <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li> -->
-                <li><a href="{{ url('logout') }}"><i class="fa fa-key"></i> Log Out</a></li>
+                <li><a href="{{ url('logout') }}"><i class="fa fa-key"></i> Đăng xuất</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -80,17 +80,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li>
                     <a class="active" href="{{ url('home') }}">
                         <i class="fa fa-dashboard"></i>
-                        <span>Home</span>
+                        <span>Trang chủ</span>
                     </a>
                 </li>
 
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-users"></i>
-                        <span>Bill</span>    
+                        <span>Hóa đơn</span>    
                     </a>
                     <ul class="sub">
-                        <li><a href="{{url('admin/bill')}}">Bill</a></li>
+                        <li><a href="{{url('admin/bill')}}">Hóa đơn</a></li>
 
                     </ul>
                 </li>
@@ -98,11 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-gift"></i>
-                        <span>Category & Product</span>
+                        <span>Loại & Sản phẩm</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('category.index')}}">Category</a></li>
-                        <li><a href="{{route('product.index')}}">Product</a></li>
+                        <li><a href="{{route('category.index')}}">Loại sản phẩm</a></li>
+                        <li><a href="{{route('product.index')}}">Sản phẩm</a></li>
                     </ul>
                 </li>
 
@@ -136,7 +136,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </section>
  <!-- footer -->
-          <div class="footer">
+          <div class="footer" style="margin-top: 450px">
             <div class="wthree-copyright">
               <p>Website bán cây cảnh <a href="http://localhost/shopping/public/">Thế giới cây</a></p>
             </div>
@@ -145,6 +145,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
 <!--main content end-->
 </section>
+<style>
+</style>
 <script src="{{asset('web/js/bootstrap.js')}}"></script>
 <script src="{{asset('web/js/jquery.dcjqaccordion.2.7.js')}}"></script>
 <script src="{{asset('web/js/scripts.js')}}"></script>

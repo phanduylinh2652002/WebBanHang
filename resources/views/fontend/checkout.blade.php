@@ -79,7 +79,7 @@
                             </div>
                             <div class="checkout-right-basket">
                                 <a href="{{ url('showcart') }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Quay lại giỏ hàng</a>
-                                <button type="submit" class="btn btn-default check_out">Gửi đơn hàng</button>
+                                <button type="submit" class="send_prd btn-default check_out ">Gửi đơn hàng</button>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -88,4 +88,18 @@
             </div>
         </div>
     </div>
+    <style>
+        .send_prd{
+            padding: 8px;
+            background-color: #212121;
+            color: white;
+            font-weight: 600;
+            border-radius: 0;
+            border: none;
+        }
+        .send_prd:hover{
+            background: linear-gradient(to right, #65b28d, #07cd60);
+            color: white;
+        }
+    </style>
 @endsection

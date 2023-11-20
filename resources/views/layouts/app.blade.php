@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Nhóm 5') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -45,7 +45,7 @@
                             </li>
                         @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <b><a class="nav-link" href="{{ route('register') }}"style="color: red">{{ __('Đăng kí') }}</a></b>
+                                    <b><a class="nav-link" href="{{ route('register') }}"style="color: red">{{ __('Đăng ký') }}</a></b>
                                 </li>
                             @endif
 

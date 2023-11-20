@@ -26,13 +26,17 @@
                 height: 50px;
                 text-align: center;
             }
+            .pagination{
+                margin-left: 510px !important;
+                margin-top:50px !important;
+            }
         </style>
         <table  border="1px" align="center">
             <tr>
                 <th>Mã silde</th>
                 <th>Ảnh</th>
-                <th>Content</th>
-                <th>Action</th>
+                <th>Nội dung</th>
+                <th>Hoạt động</th>
             </tr>
             @foreach ($slides as $s)
                 <tr>
@@ -42,10 +46,10 @@
                     <td style="width: 20%">
                         <form action="{{ route('slide.destroy',$s->id) }}" method="POST">
 
-                            <a class="btn btn-primary" href="{{ route('slide.edit',$s->id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('slide.edit',$s->id) }}">Sửa</a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button onclick="return confirm_delete()" type="submit" class="btn btn-danger">Xóa</button>
                         </form>
                     </td>
                 </tr>
@@ -54,3 +58,8 @@
     </div>
 
 @endsection
+<script>
+    function confirm_delete() {
+        return confirm('Bạn có chắc chắn muốn xóa?');
+    }
+</script>

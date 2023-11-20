@@ -29,7 +29,6 @@ class checkoutController extends Controller
         $validator = Validator::make(Input::all(), $rule);
 
         if ($validator->fails()) {
-            dd(1);
             return redirect('getcheckout')
                 ->withErrors($validator)
                 ->withInput();
@@ -72,7 +71,8 @@ class checkoutController extends Controller
             Log::error($e->getMessage());
         }
 
-        return redirect(url(''));
+
+        return redirect(url('/checkout-success'));
     }
 
     public function checkoutSuccess()

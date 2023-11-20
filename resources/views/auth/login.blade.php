@@ -4,17 +4,17 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header" style="text-align:center ; background: #E38F09"><b>Website bán cây cảnh</b>
+                <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card-header" style="text-align:center ; background: linear-gradient(to right, #65b28d, #07cd60)"><b>Website bán cây cảnh</b>
                     </div>
 
-                    <div class="card-body" style="">
+                    <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="form-group row">
                                 <label for="email"
-                                       class="col-md-4 col-form-label text-md-right"><b>{{ __('E-Mail Address') }}</b></label>
+                                       class="col-md-4 col-form-label text-md-right"><b>{{ __('E-mail') }}</b></label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -31,7 +31,7 @@
 
                             <div class="form-group row">
                                 <label for="password"
-                                       class="col-md-4 col-form-label text-md-right"><b>{{ __('Password') }}</b></label>
+                                       class="col-md-4 col-form-label text-md-right"><b>{{ __('Mật khẩu') }}</b></label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"

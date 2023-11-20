@@ -13,8 +13,8 @@
     <!--- products --->
     <div class="products">
         <div class="container">
-            <div class="col-md-4 products-left">
-                <div class="categories">
+            <div class="col-md-4 products-left" style="margin-top: 40px;">
+                <div class="categories" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                     <h2>Danh mục</h2>
                     <ul class="cate">
                     

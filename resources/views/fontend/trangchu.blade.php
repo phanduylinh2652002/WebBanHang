@@ -19,24 +19,24 @@
     <div class="container">
         <h2>Sản phẩm </h2>
         <div class="grid_3 grid_5">
-            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                 <ul id="myTab" class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Sản phẩm nổi bật</a></li>
-                    <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Sản phẩm khuyến mại<i></i></a></li>
+                    <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Sản phẩm khuyến mại<img src="" alt="" srcset=""></a></li>
+                    <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Sản phẩm nổi bật<i></i></a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
                         <div class="agile-tp">
-                            <h5>Sản phẩm Nổi bật</h5>
-                            <p class="w3l-ad">Danh sách sản phẩm nổi bật</p>
+                            <h5>Sản phẩm khuyến mại</h5>
+                            <p class="w3l-ad">Danh sách sản phẩm khuyến mại</p>
                         </div>
-                        <div class="agile_top_brands_grids">
+                        <div class="agile_top_brands_grids" style="margin-bottom: 10px">
                             
                             @foreach($disproduct as $dp)
                            
-                            <div class="col-md-4 top_brand_left">
-                                <div class="hover14 column">
-                                    <div class="agile_top_brand_left_grid">
+                            <div class="col-md-4 top_brand_left" style="margin-bottom: 20px">
+                                <div class="hover14 column" style="border-radius: 35px; ">
+                                    <div class="agile_top_brand_left_grid" style="border-radius: 35px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                                         <div class="agile_top_brand_left_grid_pos">
                                             <img src="{{asset('frontend/images/offer.png')}}" alt=" " class="img-responsive" />
                                         </div>
@@ -75,14 +75,14 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
                         <div class="agile-tp">
-                            <h5>Sản phẩm khuyến mại</h5>
-                            <p class="w3l-ad">Danh sách sản phẩm khuyến mại.</p>
+                            <h5>Sản phẩm nổi bật</h5>
+                            <p class="w3l-ad">Danh sách sản phẩm nổi bật.</p>
                         </div>
                         <div class="agile_top_brands_grids">
                               @foreach($hotproduct as $hp)
                             <div class="col-md-4 top_brand_left">
-                                <div class="hover14 column">
-                                    <div class="agile_top_brand_left_grid">
+                                <div class="hover14 column" style="margin-bottom: 20px; border-radius: 35px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                                    <div class="agile_top_brand_left_grid" style="border-radius: 35px;">
                                         <div class="agile_top_brand_left_grid_pos">
                                           <img src="{{asset('frontend/images/offer.png')}}" alt=" " class="img-responsive" />
                                         </div>
@@ -105,6 +105,7 @@
 
                                                         @endif
                                                     </div>
+                                                    @if(auth()->user())
                                                     <div class="snipcart-details top_brand_home_details">
                                                         <form action="{{url('addcart')}}" method="post">
                                                             @csrf
@@ -117,6 +118,7 @@
                                                         </form>
                                             
                                                     </div>
+                                                    @endif
                                                 </div>
                                             </figure>
                                         </div>
@@ -174,7 +176,7 @@
                             <figure>
                                 <div class="snipcart-item block">
                                     <div class="snipcart-thumb">
-                                        <a href="{{url('chi-tiet-san-pham',$new->product_id)}}"><img title=" " alt=" " src="{{ URL::to('/') }}/images/{{ $hp->image }}" width="150px" height="150px"></a>
+                                        <a href="{{url('chi-tiet-san-pham',$new->product_id)}}"><img title=" " alt=" " src="{{ URL::to('/') }}/images/{{ $new->image }}" width="150px" height="150px"></a>
                                         <p>{{$new->product_name}}</p>
                               
                                         @if($new->product_discount > 0)
@@ -212,3 +214,5 @@
     </div>
 </div>
 @endsection
+<style>
+</style>
